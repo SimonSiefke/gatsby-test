@@ -53,6 +53,7 @@ const OtherPosts = styled.section`
   align-self: flex-end;
   margin: 1.3rem auto;
   max-width: 900px;
+  padding 0 1.5rem
 `
 const OtherPost = styled.div``
 
