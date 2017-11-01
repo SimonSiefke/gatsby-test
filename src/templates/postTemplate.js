@@ -33,10 +33,12 @@ const Title = styled.h1`
     margin-left: 0;
   }
 
-  &::first-letter {
-    text-transform: uppercase;
-  }
+  // &::first-letter {
+  //   text-transform: uppercase;
+  // }
 `
+
+const Text = styled.div`color: ${props => props.theme.colors.textColor};`
 
 const OtherPosts = styled.section``
 const OtherPost = styled.div``
@@ -79,7 +81,7 @@ const Post = ({ pathContext, theme }) => {
           <Title>{post.frontmatter.title}</Title>
         </Heading>
       </HeadingWrapper>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Text dangerouslySetInnerHTML={{ __html: post.html }} />
     </article>,
     <section id="otherPosts" key="otherPosts">
       <h4>Other Blog Posts:</h4>

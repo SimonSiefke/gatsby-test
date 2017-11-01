@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "deepmerge": "^2.0.0",
     "gatsby": "^1.9.55",
     "gatsby-link": "^1.6.20",
-    "gatsby-plugin-react-helmet": "^1.0.6"
+    "gatsby-plugin-react-helmet": "^1.0.6",
+    "polished": "^1.8.1"
   },
   "devDependencies": {
     "gatsby-plugin-react-next": "^1.0.4",
