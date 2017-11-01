@@ -1,6 +1,7 @@
 import defaultTheme from './default'
+import blue from './blue'
 const themes = {
-  default: defaultTheme
+  default: blue
 }
 
 export default themes

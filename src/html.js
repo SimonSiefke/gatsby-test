@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {

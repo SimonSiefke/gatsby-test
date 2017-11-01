@@ -1,9 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+const H2 = styled.h1``
+
 const Home = () => {
   return (
     <main>
-      <h1>HomePage</h1>
+      <H2>HomePage</H2>
     </main>
   )
 }

@@ -6,8 +6,8 @@ import ArrowButton from '../components/ReadMore'
 import ReadMore from '../components/ReadMore/index'
 import Link from 'gatsby-link'
 const HeadingWrapper = styled.div`
-  background: #f66;
-  color: #f66;
+  background: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
   padding-top: 1rem;
 `
 
@@ -41,9 +41,9 @@ const Title = styled.h1`
 const OtherPosts = styled.section``
 const OtherPost = styled.div``
 
-const Post = ({ pathContext }) => {
+const Post = ({ pathContext, theme }) => {
   const { post, previousPost, nextPost } = pathContext
-
+  console.log(theme)
   // create a span with a class of first-word around the first word
   // const firstWord = post.html
   //   .substr(0, post.html.indexOf(' '))
