@@ -5,6 +5,7 @@ import './postTemplate.styl'
 import ArrowButton from '../components/ReadMore'
 import ReadMore from '../components/ReadMore/index'
 import Link from 'gatsby-link'
+
 const HeadingWrapper = styled.div`
   background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.primary};
@@ -38,14 +39,25 @@ const Title = styled.h1`
   // }
 `
 
+// const Main = styled.main`background: green;`
+
 const Text = styled.div`color: ${props => props.theme.colors.textColor};`
 
-const OtherPosts = styled.section``
+const OtherPosts = styled.section`
+  // margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  align-self: flex-end;
+  margin: 1.3rem auto;
+  max-width: 900px;
+`
 const OtherPost = styled.div``
 
-const Post = ({ pathContext, theme }) => {
+const Post = ({ pathContext }) => {
   const { post, previousPost, nextPost } = pathContext
-  console.log(theme)
   // create a span with a class of first-word around the first word
   // const firstWord = post.html
   //   .substr(0, post.html.indexOf(' '))
@@ -83,9 +95,9 @@ const Post = ({ pathContext, theme }) => {
       </HeadingWrapper>
       <Text dangerouslySetInnerHTML={{ __html: post.html }} />
     </article>,
-    <section id="otherPosts" key="otherPosts">
+    <OtherPosts id="otherPosts" key="otherPosts">
       <h4>Other Blog Posts:</h4>
-      <OtherPost align-left>
+      <OtherPost>
         {previousPost && (
           <ArrowButton path={previousPost.frontmatter.path} reverse />
         )}
@@ -95,7 +107,7 @@ const Post = ({ pathContext, theme }) => {
         {next}
         {nextPost && <ArrowButton path={nextPost.frontmatter.path} />}
       </OtherPost>
-    </section>
+    </OtherPosts>
   ]
 }
 

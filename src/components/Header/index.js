@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './index.styl'
+import styled from 'styled-components'
 // header {
 //   width: 100%;
 //   background: #9ab;
@@ -19,6 +20,8 @@ import './index.styl'
 // header .logo {
 //   font-size: 2rNameem;
 // }
+
+const Nav = styled.nav``
 
 class MyHeader extends React.Component {
   componentDidMount() {
@@ -42,7 +45,7 @@ class MyHeader extends React.Component {
           </div>
           {/* End Mobile Menu */}
 
-          <nav id="responsive-menu">
+          <Nav id="responsive-menu">
             <div className="top-bar-left">
               <ul className="vertical medium-horizontal menu">
                 <li className="menu-text">Site Title</li>
@@ -67,7 +70,7 @@ class MyHeader extends React.Component {
                 </li>
               </ul>
             </div>
-          </nav>
+          </Nav>
         </div>
       </div>
     )
