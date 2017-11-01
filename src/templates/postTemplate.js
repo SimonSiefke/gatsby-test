@@ -5,6 +5,7 @@ import './postTemplate.styl'
 import ArrowButton from '../components/ReadMore'
 import ReadMore from '../components/ReadMore/index'
 import Link from 'gatsby-link'
+import { withTheme } from 'styled-components'
 
 const HeadingWrapper = styled.div`
   background: ${props => props.theme.colors.primary};
@@ -41,7 +42,12 @@ const Title = styled.h1`
 
 // const Main = styled.main`background: green;`
 
-const Text = styled.div`color: ${props => props.theme.colors.textColor};`
+const Post = styled.article`flex: 1;`
+
+const Text = styled.div`
+  color: ${props => props.theme.colors.textColor};
+  margin-top: 2rem;
+`
 
 const OtherPosts = styled.section`
   // margin-top: auto;
@@ -53,11 +59,23 @@ const OtherPosts = styled.section`
   align-self: flex-end;
   margin: 1.3rem auto;
   max-width: 900px;
-  padding 0 1.5rem
+  padding 0 1.5rem;
+  margin-top:auto;
 `
-const OtherPost = styled.div``
+const OtherPost = styled.div`
+  ${props => (props['align-right'] ? 'margin-left:auto' : '')};
+  align-items: center;
+  display: flex;
+  .text {
+    font-size: ${props => props.theme.fonts.sizes.sm};
 
-const Post = ({ pathContext }) => {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
+
+const PostTemplate = ({ pathContext }) => {
   const { post, previousPost, nextPost } = pathContext
   // create a span with a class of first-word around the first word
   // const firstWord = post.html
@@ -88,15 +106,15 @@ const Post = ({ pathContext }) => {
   )
 
   return [
-    <article key="article">
+    <Post key={post.frontmatter.path}>
       <HeadingWrapper>
         <Heading>
           <Title>{post.frontmatter.title}</Title>
         </Heading>
       </HeadingWrapper>
       <Text dangerouslySetInnerHTML={{ __html: post.html }} />
-    </article>,
-    <OtherPosts id="otherPosts" key="otherPosts">
+    </Post>,
+    <OtherPosts key="otherPosts" id="otherPosts">
       <h4>Other Blog Posts:</h4>
       <OtherPost>
         {previousPost && (
@@ -112,4 +130,4 @@ const Post = ({ pathContext }) => {
   ]
 }
 
-export default Post
+export default withTheme(PostTemplate)

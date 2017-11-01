@@ -63,7 +63,7 @@ class MyHeader extends React.Component {
                   <Link to="/Portfolio">Portfolio</Link>
                 </li>
                 <li>
-                  <a href="/About">About</a>
+                  <Link to="/About">About</Link>
                 </li>
                 <li>
                   <a href="#">Section Four</a>

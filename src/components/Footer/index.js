@@ -3,7 +3,7 @@ import './index.css'
 
 const Footer = () => (
   <footer>
-    <p>Made with &lt;3 in Germany</p>
+    {/* <p>Made with &lt;3 in Germany</p> */}
     <p>{new Date().getFullYear()}</p>
   </footer>
 )
