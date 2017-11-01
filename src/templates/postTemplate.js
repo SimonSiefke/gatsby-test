@@ -5,29 +5,33 @@ import './postTemplate.styl'
 import ArrowButton from '../components/ReadMore'
 import ReadMore from '../components/ReadMore/index'
 import Link from 'gatsby-link'
+const HeadingWrapper = styled.div`
+  background: #f66;
+  color: #f66;
+  padding-top: 1rem;
+`
+
 const Heading = styled.div`
-  display: flex;
-  position: relative;
-  background: #ff6666;
-  padding: 1rem 1rem 0 1rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `
 const Title = styled.h1`
-  // margin: 0 10% 0 10%;
-  // margin: 0 auto;
-  margin-top: 0;
+  letter-spacing: 0.1rem;
   margin-bottom: 0;
+  display: inline-block;
   margin-left: 1.5rem;
   padding: 0.3rem 1rem;
   font-size: 2.2rem;
   font-family: 'Alegreya', sans-serif;
   font-weight: 700;
   background: white;
-  color: #ff6666;
-  letter-spacing: 0.1rem;
-  // @media (min-width: 400px) {
-  //   margin-left: 20%;
-  //   margin-right: 20%;
-  // }
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
 
   &::first-letter {
     text-transform: uppercase;
@@ -67,10 +71,11 @@ const Post = ({ pathContext }) => {
 
   return [
     <article key="article">
-      <Heading>
-        <Title>{post.frontmatter.title}</Title>
-      </Heading>
-
+      <HeadingWrapper>
+        <Heading>
+          <Title>{post.frontmatter.title}</Title>
+        </Heading>
+      </HeadingWrapper>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </article>,
     <section id="otherPosts" key="otherPosts">
