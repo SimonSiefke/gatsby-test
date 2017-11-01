@@ -1,0 +1,31 @@
+{
+  "name": "gatsby-blog-try",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gatsby develop --port 3000",
+    "lint": "eslint src",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^1.9.55",
+    "gatsby-link": "^1.6.20",
+    "gatsby-plugin-react-helmet": "^1.0.6"
+  },
+  "devDependencies": {
+    "gatsby-plugin-react-next": "^1.0.4",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "gatsby-plugin-stylus": "^1.1.10",
+    "gatsby-source-filesystem": "^1.5.2",
+    "gatsby-transformer-remark": "^1.7.15",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+@require './font.styl'
+@require './spacing.styl'
+@require './mixins.styl'
+
+h1
+  font-size $font-very-large
+
+h2
+  font-size $font-large
+
+section
+  margin-top $margin-small
+
+h1, h2, h3, h4, h5, h6, p, span, a, div
+  &::selection
+    background lime
+    color contrast(@background)

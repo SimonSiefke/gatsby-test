@@ -1,0 +1,13 @@
+footer {
+  background: #444f6f;
+  color: #ffffff;
+  justify-self: flex-end;
+  bottom: 0;
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #7ed9ff;
+  /* $dark-gray = #444F6F
+  $blue-link-color = #7ed9ff */
+}

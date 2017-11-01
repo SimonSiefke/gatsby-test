@@ -1,0 +1,100 @@
+
+/* .top-bar {
+   background: white;
+   }
+   .title-bar {
+   background: #2c3e50;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   }
+   .title-bar-title {
+   text-transform: uppercase;
+   margin: 0;
+   padding: 0;
+   }
+   
+   .menu-text {
+   margin-right: auto;
+   } */
+h1, h2, h3, h4, h5
+  font-family 'Amatic SC', cursive
+
+.top-bar a
+  color white
+
+.top-bar ul
+  background-color transparent
+
+.top-bar
+  background-color red
+  position relative
+  z-index 2
+
+.menu > li > a
+  padding .7rem .5rem
+
+.top-bar-title
+  color #fff
+  /* margin-top: 5px; */
+
+.title-bar-title > a
+  color white
+  font-family 'Covered By Your Grace', cursive
+  font-size 25px
+
+.title-bar
+  position relative
+  z-index 2
+
+@media screen and (min-width: 40em)
+  /* .top-bar-title {
+     float: left;
+     } */
+
+/* Small only */
+@media screen and (max-width: 39.9375em)
+  .title-bar-title.text-center
+    left 50%
+    position absolute
+    top 50%
+    transform translate(-50%, -50%)
+
+  .top-bar-left
+    display none
+
+  .title-bar
+    /* display: flex;
+       align-items: center; */
+
+  .title-bar-title
+    /* margin-left: auto;
+       margin-right: auto; */
+
+  .top-bar-title
+    /* display: flex;
+       align-items: center;
+       width: 100%;
+       margin: 0; */
+
+  .menu
+    /* display: flex;
+       align-items: center; */
+
+  .top-bar-title span, .title-bar-title
+    /* text-align: center;
+       flex: 1;
+       margin-left: auto; */
+
+  .menu > li > a
+    text-align center
+
+    &:hover
+      background-color rgba(93, 64, 55, .5)
+
+.top-bar
+  background #2c3e50
+  padding 0
+
+.header
+  width 100%

@@ -1,0 +1,25 @@
+/* * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+} */
+
+body {
+  line-height: 150%;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
