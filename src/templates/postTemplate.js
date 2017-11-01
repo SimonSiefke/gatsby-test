@@ -38,6 +38,9 @@ const Title = styled.h1`
   }
 `
 
+const OtherPosts = styled.section``
+const OtherPost = styled.div``
+
 const Post = ({ pathContext }) => {
   const { post, previousPost, nextPost } = pathContext
 
@@ -80,16 +83,16 @@ const Post = ({ pathContext }) => {
     </article>,
     <section id="otherPosts" key="otherPosts">
       <h4>Other Blog Posts:</h4>
-      <div>
+      <OtherPost align-left>
         {previousPost && (
           <ArrowButton path={previousPost.frontmatter.path} reverse />
         )}
         {previous}
-      </div>
-      <div>
+      </OtherPost>
+      <OtherPost align-right>
         {next}
         {nextPost && <ArrowButton path={nextPost.frontmatter.path} />}
-      </div>
+      </OtherPost>
     </section>
   ]
 }
